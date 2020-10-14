@@ -83,9 +83,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <a href="{{ url('agendar') }}">Agendar cita</a>
                 </div>
-                <example-component></example-component>
+                <draggable-cal @selectedDate="doSomething($event)"></draggable-cal>
+
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
