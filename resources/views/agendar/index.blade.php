@@ -22,10 +22,10 @@
                     <div class="row row-cols-1 row-cols-md-3">
                         @foreach($entities as $entity)
                             <div class="col mb-4">
-                                <div class="card">
+                                <div class="card hovereffect">
                                     <img src="{{ $entity->image }}" class="card-img-top" alt="...">
-                                    <div class="card-footer">
-                                        <a href="{{ url('agendar/'.$entity->slug) }}" class="btn btn-block btn-outline-primary">{{ $entity->title }}</a>
+                                    <div class="overlay">
+                                        <a href="{{ url('agendar/'.$entity->slug) }}" class="btn btn-sm btn-primary info">{{ $entity->title }}</a>
                                     </div>
                                 </div>
                             </div>

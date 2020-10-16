@@ -18,10 +18,13 @@
                         @foreach($services as $service)
                             <div class="col mb-4">
                                 <div class="card">
-                                    <img src="{{ $service->image }}" class="card-img-top" alt="...">
-                                    <div class="card-footer">
-                                        <a href="{{ url('agendar/'.$entity.'/'.$cita.'/'.$company.'/'.$service->slug) }}" class="btn btn-block btn-outline-primary">{{ $service->title }}</a>
-                                    </div>
+                                    <a href="{{ url('agendar/'.$entity.'/'.$cita.'/'.$company.'/'.$service->slug) }}">
+                                        <img src="{{ $service->image }}" class="card-img-top" alt="...">
+                                        <div class="div-encima">
+                                            <p>{{ $service->title }}</p>
+                                        </div>
+                                    </a>
+                                    
                                     <div class="card-body p-2">
                                         <p class="card-text" style="font-size: 0.7rem;">{{ $service->description }}</p>
                                     </div>

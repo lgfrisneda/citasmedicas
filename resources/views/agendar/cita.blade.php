@@ -16,12 +16,14 @@
                         @foreach($appointments as $appointment)
                             <div class="col mb-4">
                                 <div class="card">
-                                    <img src="{{ $appointment->image }}" class="card-img-top" alt="...">
-                                    <div class="card-footer">
-                                        <a href="{{ url('agendar/'.$entity.'/'.$appointment->slug) }}" class="btn btn-block btn-outline-primary">{{ $appointment->title }}</a>
+                                    <div class="hovereffect">
+                                        <img src="{{ $appointment->image }}" class="card-img-top" alt="...">
+                                        <div class="overlay">
+                                            <a href="{{ url('agendar/'.$entity.'/'.$appointment->slug) }}" class="btn btn-sm btn-secondary info">{{ $appointment->title }}</a>
+                                        </div>
                                     </div>
                                     <div class="card-body">
-                                        <p class="card-text">{{ $appointment->description }}</p>
+                                        <p class="card-text" style="font-size: 0.7rem;">{{ $appointment->description }}</p>
                                     </div>
                                 </div>
                             </div>

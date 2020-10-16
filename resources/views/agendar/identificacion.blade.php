@@ -17,7 +17,12 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="dni">DNI</label>
-                                    <input type="text" class="form-control" id="dni" name="dni">
+                                    <input type="text" class="form-control @error('dni') is-invalid @enderror" id="dni" name="dni">
+                                    @error('dni')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="form-group text-center">
                                     <button type="submit" class="btn btn-warning mb-2">Siguiente pantalla</button>

@@ -184,7 +184,7 @@ class AgendarController extends Controller
 
 	    $representante = "n-a";
 
-    	return redirect('agendar/'.$entity.'/'.$cita.'/'.$company.'/'.$servicio.'/'.$sede.'/'.$profesional.'/'.$dni.'/'.$representante.'/confirmacion');
+    	return redirect('agendar/'.$entity.'/'.$cita.'/'.$company.'/'.$servicio.'/'.$sede.'/'.$profesional.'/'.$dni.'/'.$representante.'/confirmacion')->with('info', 'Al ser un paciente menor de edad, debe ser presentado por un responsable mayor de edad.');
     }
 
     public function dataPatientRep($entity, $cita, $company, $servicio, $sede, $profesional, $dni, $representante)
