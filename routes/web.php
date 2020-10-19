@@ -33,3 +33,4 @@ Route::get('agendar/{entidad}/{cita}/{company}/{servicio}/{sede}/{profesional}/{
 Route::put('agendar/{entidad}/{cita}/{company}/{servicio}/{sede}/{profesional}/{dni}/{representante}', 'AgendarController@updateDataPatientRep');
 Route::get('agendar/{entidad}/{cita}/{company}/{servicio}/{sede}/{profesional}/{dni}/{representante}/confirmacion', 'AgendarController@confirmacion');
 Route::post('agendar/guardar', 'AgendarController@storeCita');
+Route::get('comprobante', 'AgendarController@comprobante')->name('comprobantePDF');

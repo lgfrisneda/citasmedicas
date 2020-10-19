@@ -7,6 +7,7 @@
             <div class="col-md-12">
                 <div class="alert alert-primary" role="alert">
                     {{ SESSION('info') }}
+                    <a href="{{ route('comprobantePDF') }}" class="btn btn-sm btn-success float-right">Descargar comprobante</a>
                 </div>
             </div>
         </div>

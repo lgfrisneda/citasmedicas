@@ -15,6 +15,7 @@ use App\Datetime;
 use App\Patient;
 use App\PatientRep;
 use App\Register;
+use Barryvdh\DomPDF\Facade as PDF;
 
 
 class AgendarController extends Controller
@@ -276,5 +277,15 @@ class AgendarController extends Controller
 	    $register->save();
 
 	    return redirect('agendar/')->with('info', 'Cita agendada exitosamente.');
+    }
+
+    public function comprobante()
+    {
+    	$comprobante = Register::latest('id')->first();
+
+    	$pdf = PDF::loadView('agendar.comprobante', compact('comprobante'));
+
+    	return $pdf->download('Comprobante-cita-medica.pdf');
+    	//return view('agendar.comprobante', compact('comprobante'));
     }
 }
